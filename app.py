@@ -99,18 +99,20 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-st.title("Easy Sync AAF Tool")
-st.markdown("""
-Utilize the power of ALEs and EDLs to make Sync AAFs easy peasy. 
-            
-Upload your ALE, upload your EDL, and get your transformed EDL below.
-
-Your files will never be stored/uploaded/used to train advanced AI Assistant Editors.
-""")
-
-# File uploaders
-uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
-uploaded_edl = st.file_uploader("Upload your EDL file", type=["edl"])
+center_col, _ = st.columns([1, 3])
+with center_col:
+    st.title("Easy Sync AAF Tool")
+    st.markdown("""
+    Utilize the power of ALEs and EDLs to make Sync AAFs easy peasy. 
+                
+    Upload your ALE, upload your EDL, and get your transformed EDL below.
+    
+    Your files will never be stored/uploaded/used to train advanced AI Assistant Editors.
+    """)
+    
+    # File uploaders
+    uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
+    uploaded_edl = st.file_uploader("Upload your EDL file", type=["edl"])
 
 if uploaded_ale and uploaded_edl:
     try:
