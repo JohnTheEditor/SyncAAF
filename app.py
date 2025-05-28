@@ -164,13 +164,17 @@ with center_col:
                     Name    Tracks    Tape    Start    End    Source File
         - Export this ALE to your desktop
 
+
     3) Upload & Download
         - Drag and drop into the respecive boxes below, and download your shiny new EDL
 
+
     4) Reimport
         - Use the source browser to reimport this sequence back into Media Composer
-        - When Prompted, select "Don't Map" under the "Select Audio Mapping" drop down, and continue the import*
-        - You should now have a massive timeline of offline audio media
+        - When Prompted, select "Don't Map" under the "Select Audio Mapping" drop down, and continue the import
+        - You may get some error messages is respeeds were present, but you can ignore those
+        - You should now have a massive timeline of offline audio media, nice!
+
         
     5) Relink
         - Right click your sequence -> Relink -> Managed Media
@@ -184,14 +188,13 @@ with center_col:
         - Click ok and hope for the best
         - If you've got recaps pulling from other eps, you may need to go episode by episode to get those guys back online
 
+
     6) Check
         - Cut back in your original V1 EDL to a video track in your newly relinked sequence and make sure things look good
 
+
     7) Export
         - Send that baby out!
-    
-    
-    * If you get a message like "There were 37 errors..." that usually is just the M2/respeed events not coming through. You're probably safe to ignore those
     
     ---
     
