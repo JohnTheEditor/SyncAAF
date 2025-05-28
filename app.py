@@ -170,13 +170,11 @@ with center_col:
         - Drag and drop into the boxes above, download your shiny new EDL
         
 
-
     4) Reimport
-        - Use the source browser to reimport this sequence back into Media Composer
-        - When Prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down, and continue the import
+        - Reimport your new EDL back into Media Composer
+        - When prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down
         - You may get some error messages is respeeds were present, but you can ignore those
         - You should now have a massive timeline of offline audio media, nice!
-
 
         
     5) Relink
@@ -185,17 +183,16 @@ with center_col:
             - Select the drive where your media lives
             - Utilize "Tape Name or Source File Name"
             - Tick "Ignore Extension"
-            - Untick "Match case when..."
+            - Untick "Match case when comparing..."
             - Select only "Audio" under "Tracks to relink"
-            - Untick "Create New Sequence" if you like
+            - Untick "Create New Sequence"
         - Click ok and hope for the best
         - If you've got recaps pulling from other eps, you may need to go episode by episode to get those guys back online
-
+        - You should now have a timeline full of beautiful, online audio clips
 
 
     6) Check
-        - Cut back in your original V1 EDL to a video track in your newly relinked sequence and make sure things look good
-
+        - Cut your original V1 track in & make sure things look good
 
 
     7) Export
