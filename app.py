@@ -161,6 +161,7 @@ with center_col:
         - Drag your V1 sequence into a new bin.
         - Right Click > Set Bin Display... > And select only **"Master Clips"** and **"Show reference clips"**
         - Set your bin view to **only** have the following columns:
+        
                         Name    Tracks    Tape    Start    End    Source File
         - Export this ALE to your desktop
 
