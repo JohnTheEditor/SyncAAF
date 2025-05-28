@@ -99,7 +99,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-center_col, _ = st.columns([1, 3])
+# Centered, slightly-wide UI block
+left_pad, center_col, right_pad = st.columns([1, 2.5, 1])
 with center_col:
     st.title("Easy Sync AAF Tool")
     st.markdown("""
