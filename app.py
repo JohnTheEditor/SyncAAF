@@ -163,7 +163,7 @@ with center_col:
         - Set your bin view to **only** have the following columns:
         
                         Name    Tracks    Tape    Start    End    Source File
-        - Export this ALE to your desktop
+        - Export your bin as an ALE to your desktop
 
 
     3) Upload & Download
