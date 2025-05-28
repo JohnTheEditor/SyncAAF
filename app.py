@@ -93,7 +93,7 @@ def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
 
 # Streamlit UI
 st.set_page_config(
-    page_title="Easy Sync AAF Tool",
+    page_title="Sync AAF Tool",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -105,8 +105,10 @@ left_pad, center_col, right_pad = st.columns([1, 2.5, 1])
 with center_col:
     st.title("Easy Sync AAF Tool - In development")
     st.markdown("""
-    Make an all-tracks Sync AAF easy peasy with an ALE & a V1 EDL.
+    Use an ALE & a V1 EDL to make a Sync AAF with *all* your audio tracks.
 
+    Your files will never be stored/uploaded/used to train advanced AI Assistant Editors.
+    ---
     """)
     
     # File uploaders
