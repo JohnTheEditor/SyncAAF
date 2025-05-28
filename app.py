@@ -95,7 +95,7 @@ def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
 st.set_page_config(
     page_title="Easy Sync AAF Tool",
     page_icon="🎬",
-    layout="centered",
+    layout="wide",
     initial_sidebar_state="collapsed"
 )
 
@@ -119,17 +119,19 @@ if uploaded_ale and uploaded_edl:
         tape_to_tracks = ale_df["Tracks"].to_dict()
         
         # Process EDL file
+        base_name = os.path.splitext(uploaded_edl.name)[0]
+        new_filename = base_name + "_AllAudioTracks.edl"
         transformed_edl = transform_edl_with_audio_tracks(uploaded_edl.getvalue(), tape_to_tracks)
         
         # Display preview
-        st.subheader("Preview of Transformed EDL")
+        st.subheader("EDL Preview")
         st.text_area("Preview", transformed_edl, height=300)
         
         # Download button
         st.download_button(
-            label="Download Transformed EDL",
+            label="Download your EDl",
             data=transformed_edl,
-            file_name="AllAudioTracks.edl",
+            file_name= new_filename,
             mime="text/plain"
         )
         
