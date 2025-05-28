@@ -200,7 +200,7 @@ with center_col:
     
     ---
 
-    Like this? You might also like my [Sequence Report to Marker List Tool](https://csvtodimarkers.streamlit.app/) too!
+    Like this? You might also dig this [Sequence Report to Marker List Tool](https://csvtodimarkers.streamlit.app/) too.
     
     If anything is weird, feel free to say so!
     
