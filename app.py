@@ -159,7 +159,7 @@ with center_col:
 
     2) Create your ALE
         - Drag your V1 sequence into a new bin.
-        - Right Click > Set Bin Display... > And select only "Master Clips" and "Show reference clips"
+        - Right Click > Set Bin Display... > And select only **"Master Clips"** and **"Show reference clips"**
         - Set your bin view to **only** have the following columns:
                     Name    Tracks    Tape    Start    End    Source File
         - Export this ALE to your desktop
@@ -171,7 +171,7 @@ with center_col:
 
     4) Reimport
         - Use the source browser to reimport this sequence back into Media Composer
-        - When Prompted, select "Don't Map" under the "Select Audio Mapping" drop down, and continue the import
+        - When Prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down, and continue the import
         - You may get some error messages is respeeds were present, but you can ignore those
         - You should now have a massive timeline of offline audio media, nice!
 
@@ -200,5 +200,5 @@ with center_col:
     
     If anything is weird, feel free to say so!
     
-    📩  **JohnJGrenham@gmail.com**
+    **JohnJGrenham@gmail.com**
     """)
