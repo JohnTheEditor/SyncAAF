@@ -155,7 +155,7 @@ with center_col:
         - Flatten your sequence, moving every visible clip down to V1
         - Export this as an EDL, make sure your Tape names are in the event line like so:
 
-                        000008  **A540C008_241009QL**
+                        000008  A540C008_241009QL
 
     2) Create your ALE
         - Drag your V1 sequence into a new bin.
