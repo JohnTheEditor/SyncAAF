@@ -101,14 +101,12 @@ st.set_page_config(
 
 # Centered, slightly-wide UI block
 left_pad, center_col, right_pad = st.columns([1, 2.5, 1])
+
 with center_col:
-    st.title("Easy Sync AAF Tool")
+    st.title("Easy Sync AAF Tool - In development")
     st.markdown("""
-    Utilize the power of ALEs and EDLs to make Sync AAFs easy peasy. 
-                
-    Upload your ALE, upload your EDL, and get your transformed EDL below.
-    
-    Your files will never be stored/uploaded/used to train advanced AI Assistant Editors.
+    Make an all-tracks Sync AAF easy peasy with an ALE & a V1 EDL.
+
     """)
     
     # File uploaders
@@ -132,7 +130,7 @@ if uploaded_ale and uploaded_edl:
         
         # Download button
         st.download_button(
-            label="Download your EDl",
+            label="Download your EDL",
             data=transformed_edl,
             file_name= new_filename,
             mime="text/plain"
@@ -142,9 +140,58 @@ if uploaded_ale and uploaded_edl:
         st.error(f"An error occurred: {str(e)}")
         st.error("Please make sure your files are in the correct format.")
 
+with center_col:
 st.markdown("""
 ---
 
+Check out this video for a demo of how to use this: (I'll put a video here eventually)
+
+How to use this:
+
+    1) Create a V1 EDL: 
+        - Flatten your sequence, moving every visible clip down to V1
+        - Export this as an EDL, make sure your Tape names are in the event line like so:
+
+        000008  **A540C008_241009QL**
+
+    2) Create your ALE
+        -Drag your V1 sequence into a new bin.
+        -Right Click > Set Bin Display... > And select only "Master Clips" and "Show reference clips"
+        -Set your bin view to **only** have the following columns:
+                    Name    Tracks    Tape    Start    End    Source File
+        -Export this ALE to your desktop
+
+    3) Upload & Download
+        -Drag and drop into the respecive boxes below, and download your shiny new EDL
+
+    4) Reimport
+        -Use the source browser to reimport this sequence back into Media Composer
+        -When Prompted, select "Don't Map" under the "Select Audio Mapping" drop down, and continue the import*
+        -You should now have a massive timeline of offline audio media
+        
+    5) Relink
+        -Right click your sequence -> Relink -> Managed Media
+        -This step will probably vary and take some tinkering, but generally I use these settings:
+            -Select the drive where your media lives
+            -Utilize "Tape Name or Source File Name"
+            -Tick "Ignore Extension"
+            -Untick "Match case when..."
+            -Select only "Audio" under "Tracks to relink"
+            -Untick "Create New Sequence" if you like
+        -Click ok and hope for the best
+        -If you've got recaps pulling from other eps, you may need to go episode by episode to get those guys back online
+
+    6) Check
+        -Cut back in your original V1 EDL to a video track in your newly relinked sequence and make sure things look good
+
+    7) Export
+        -Send that baby out
+    
+* If you get a message like "There were 37 errors..." that usually is just the M2/respeed events not coming through. You're probably safe to ignore those
+
+---
+
 If anything is weird, feel free to say so!
-📩 **JohnJGrenham@gmail.com**
+
+📩  **JohnJGrenham@gmail.com**
 """)
