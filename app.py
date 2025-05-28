@@ -38,7 +38,7 @@ def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
     # First pass: collect header lines
     for line in edl_lines:
         if not re.match(r'^\d{6}\s', line):  # If it's not an event line
-            header_lines.append(line)
+            header_lines.append(line + '\n')
         else:
             break  # Stop when we hit the first event line
 
@@ -129,7 +129,7 @@ if uploaded_ale and uploaded_edl:
         st.download_button(
             label="Download Transformed EDL",
             data=transformed_edl,
-            file_name="transformed_edl.edl",
+            file_name="AllAudioTracks.edl",
             mime="text/plain"
         )
         
