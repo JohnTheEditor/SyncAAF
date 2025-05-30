@@ -194,7 +194,8 @@ with center_col:
     
         7) Export
             - Send it out!
-    
+    """
+    st.markdown("""
     ---
 
     Like this? You might also dig this [Sequence Report to Marker List Tool](https://csvtodimarkers.streamlit.app/) too.
