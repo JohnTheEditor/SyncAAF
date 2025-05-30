@@ -144,59 +144,60 @@ if uploaded_ale and uploaded_edl:
         st.error("Please make sure your files are in the correct format.")
 
 with center_col:
-    st.markdown("""
-    ---
-    
-    Check out this video for a demo of how to use this: (I'll put a video here eventually)
-    
-    Instructions:
-    
-    1) Create a V1 EDL: 
-        - Flatten your sequence, moving every visible clip down to V1
-        - Export this as an EDL, make sure your Tape names are in the event line like so:
-
-                        000008  A540C008_241009QL
-
-    2) Create your ALE
-        - Drag your V1 sequence into a new bin.
-        - Right Click > Set Bin Display... > And select only **"Master Clips"** and **"Show reference clips"**
-        - Set your bin view to **only** have the following columns:
+    with st.expander("How to use me (click to expand)"):
+        st.markdown("""
+        ---
         
-                        Name    Tracks    Tape    Start    End    Source File
-        - Export your bin as an ALE to your desktop
-
-
-    3) Upload & Download
-        - Drag and drop into the boxes above, download your shiny new EDL
+        Check out this video for a demo of how to use this: (I'll put a video here eventually)
         
-
-    4) Reimport
-        - Reimport your new EDL back into Media Composer
-        - When prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down
-        - You may get some error messages is respeeds were present, but you can ignore those
-        - You should now have a massive timeline of offline audio media, nice!
-
+        Instructions:
         
-    5) Relink
-        - Right click your sequence -> Relink -> Managed Media
-        - This step will probably vary and take some tinkering, but generally I use these settings:
-            - Select the drive where your media lives
-            - Utilize "Tape Name or Source File Name"
-            - Tick "Ignore Extension"
-            - Untick "Match case when comparing..."
-            - Select only "Audio" under "Tracks to relink"
-            - Untick "Create New Sequence"
-        - Click ok and hope for the best
-        - If you've got recaps pulling from other eps, you may need to go episode by episode to get those guys back online
-        - You should now have a timeline full of beautiful, online audio clips
-
-
-    6) Check
-        - Cut your original V1 track in & make sure things look good
-
-
-    7) Export
-        - Send that baby out!
+        1) Create a V1 EDL: 
+            - Flatten your sequence, moving every visible clip down to V1
+            - Export this as an EDL, make sure your Tape names are in the event line like so:
+    
+                            000008  A540C008_241009QL
+    
+        2) Create your ALE
+            - Drag your V1 sequence into a new bin.
+            - Right Click > Set Bin Display... > And select only **"Master Clips"** and **"Show reference clips"**
+            - Set your bin view to **only** have the following columns:
+            
+                            Name    Tracks    Tape    Start    End    Source File
+            - Export your bin as an ALE to your desktop
+    
+    
+        3) Upload & Download
+            - Drag and drop into the boxes above, download your shiny new EDL
+            
+    
+        4) Reimport
+            - Reimport your new EDL back into Media Composer
+            - When prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down
+            - You may get some error messages is respeeds were present, but you can ignore those
+            - You should now have a massive timeline of offline audio media, nice!
+    
+            
+        5) Relink
+            - Right click your sequence -> Relink -> Managed Media
+            - This step will probably vary and take some tinkering, but generally I use these settings:
+                - Select the drive where your media lives
+                - Utilize "Tape Name or Source File Name"
+                - Tick "Ignore Extension"
+                - Untick "Match case when comparing..."
+                - Select only "Audio" under "Tracks to relink"
+                - Untick "Create New Sequence"
+            - Click ok and hope for the best
+            - If you've got recaps pulling from other eps, you may need to go episode by episode to get those guys back online
+            - You should now have a timeline full of beautiful, online audio clips
+    
+    
+        6) Check
+            - Cut your original V1 track in & make sure things look good
+    
+    
+        7) Export
+            - Send that baby out!
     
     ---
 
