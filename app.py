@@ -160,7 +160,7 @@ with center_col:
             - Set your bin view to **only** have the following columns:
             
                             Name    Tracks    Tape    Start    End    Source File
-            - Export your bin as an ALE to your desktop
+            - Export your bin as an ALE
     
     
         3) Upload & Download
@@ -170,7 +170,7 @@ with center_col:
         4) Reimport
             - Reimport your new EDL back into Media Composer
             - When prompted, select **"Don't Map"** under the "Select Audio Mapping" drop down
-            - You may get some error messages is respeeds were present, but you can ignore those
+            - You may get some error messages if respeeds were present, but you can ignore those
             - You should now have a massive timeline of offline audio media, nice!
     
             
