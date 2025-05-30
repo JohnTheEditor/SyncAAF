@@ -194,7 +194,7 @@ with center_col:
     
         7) Export
             - Send it out!
-    """
+    """)
     st.markdown("""
     ---
 
