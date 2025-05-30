@@ -116,40 +116,37 @@ with center_col:
     uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
     uploaded_edl = st.file_uploader("Upload your EDL file", type=["edl"])
 
-if uploaded_ale and uploaded_edl:
-    try:
-        # Process ALE file
-        ale_df = parse_working_ale(uploaded_ale.getvalue())
-        tape_to_tracks = ale_df["Tracks"].to_dict()
-        
-        # Process EDL file
-        base_name = os.path.splitext(uploaded_edl.name)[0]
-        new_filename = base_name + "_AllAudioTracks.edl"
-        transformed_edl = transform_edl_with_audio_tracks(uploaded_edl.getvalue(), tape_to_tracks)
-        
-        # Display preview
-        st.subheader("EDL Preview")
-        st.text_area("Preview", transformed_edl, height=300)
-        
-        # Download button
-        st.download_button(
-            label="Download your EDL",
-            data=transformed_edl,
-            file_name= new_filename,
-            mime="text/plain"
-        )
-        
-    except Exception as e:
-        st.error(f"An error occurred: {str(e)}")
-        st.error("Please make sure your files are in the correct format.")
+    if uploaded_ale and uploaded_edl:
+        try:
+            # Process ALE file
+            ale_df = parse_working_ale(uploaded_ale.getvalue())
+            tape_to_tracks = ale_df["Tracks"].to_dict()
+            
+            # Process EDL file
+            base_name = os.path.splitext(uploaded_edl.name)[0]
+            new_filename = base_name + "_AllAudioTracks.edl"
+            transformed_edl = transform_edl_with_audio_tracks(uploaded_edl.getvalue(), tape_to_tracks)
+            
+            # Display preview
+            st.subheader("EDL Preview")
+            st.text_area("Preview", transformed_edl, height=300)
+            
+            # Download button
+            st.download_button(
+                label="Download your EDL",
+                data=transformed_edl,
+                file_name= new_filename,
+                mime="text/plain"
+            )
+            
+        except Exception as e:
+            st.error(f"An error occurred: {str(e)}")
+            st.error("Please make sure your files are in the correct format.")
 
-with center_col:
     with st.expander("How to use me (click to expand)"):
         st.markdown("""
         
-        Check out this video for a demo of how to use this: (I'll put a video here eventually)
-        
-        ###Instructions:
+        Instructions:
         
         1) Create a V1 EDL: 
             - Flatten your sequence, moving every visible clip down to V1
