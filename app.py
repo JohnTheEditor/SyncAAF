@@ -146,11 +146,10 @@ if uploaded_ale and uploaded_edl:
 with center_col:
     with st.expander("How to use me (click to expand)"):
         st.markdown("""
-        ---
         
         Check out this video for a demo of how to use this: (I'll put a video here eventually)
         
-        Instructions:
+        ###Instructions:
         
         1) Create a V1 EDL: 
             - Flatten your sequence, moving every visible clip down to V1
@@ -197,7 +196,7 @@ with center_col:
     
     
         7) Export
-            - Send that baby out!
+            - Send it out!
     
     ---
 
