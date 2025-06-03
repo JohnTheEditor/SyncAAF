@@ -113,20 +113,20 @@ with center_col:
     """)
 
     with open("ALE_Example.ale", "rb") as f:
-    st.download_button(
-        label="Download Sample ALE",
-        data=f,
-        file_name="ALE_Example.ale",
-        mime="text/ale"
-    )
+        st.download_button(
+            label="Download Sample ALE",
+            data=f,
+            file_name="ALE_Example.ale",
+            mime="text/ale"
+        )
 
     with open("V1 EDL Example.edl", "rb") as f:
-    st.download_button(
-        label="Download Sample EDL",
-        data=f,
-        file_name="V1 EDL Example.edl",
-        mime="text/edl"
-    )
+        st.download_button(
+            label="Download Sample EDL",
+            data=f,
+            file_name="V1 EDL Example.edl",
+            mime="text/edl"
+        )
     
     
     # File uploaders
