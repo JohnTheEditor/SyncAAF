@@ -112,27 +112,31 @@ with center_col:
 
     """)
 
-    try:
-        with open("ALE Example.ALE", "rb") as f:
-            st.download_button(
-                label="Download Sample ALE",
-                data=f,
-                file_name="ALE Example.ALE",
-                mime="text/ale"
-            )
-    except FileNotFoundError:
-        st.warning("Sample ALE file not found")
+    col1, col2 = st.columns(2)
 
-    try:
-        with open("V1 EDL Example.edl", "rb") as f:
-            st.download_button(
-                label="Download Sample EDL",
-                data=f,
-                file_name="V1 EDL Example.edl",
-                mime="text/edl"
-            )
-    except FileNotFoundError:
-        st.warning("Sample EDL file not found")
+    with col1:
+        try:
+            with open("ALE Example.ALE", "rb") as f:
+                st.download_button(
+                    label="Download Sample ALE",
+                    data=f,
+                    file_name="ALE Example.ALE",
+                    mime="text/ale"
+                )
+        except FileNotFoundError:
+            st.warning("Sample ALE file not found")
+    
+    with col2:
+        try:
+            with open("V1 EDL Example.edl", "rb") as f:
+                st.download_button(
+                    label="Download Sample EDL",
+                    data=f,
+                    file_name="V1 EDL Example.edl",
+                    mime="text/edl"
+                )
+        except FileNotFoundError:
+            st.warning("Sample EDL file not found")
     
     # File uploaders
     uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
