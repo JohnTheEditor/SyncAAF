@@ -113,11 +113,11 @@ with center_col:
     """)
 
     try:
-        with open("ALE_Example.ALE", "rb") as f:
+        with open("ALE Example.ALE", "rb") as f:
             st.download_button(
                 label="Download Sample ALE",
                 data=f,
-                file_name="ALE_Example.ALE",
+                file_name="ALE Example.ALE",
                 mime="text/ale"
             )
     except FileNotFoundError:
