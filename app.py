@@ -25,7 +25,8 @@ def parse_working_ale(file_content):
     # Clean and extract A1, A2, etc.
     df["Tracks"] = df["Tracks"].str.replace("V", "", regex=False)
     df["Tracks"] = df["Tracks"].apply(lambda x: " ".join(re.findall(r'A\d+', x)))
-
+    
+    df["Tape"] = df["Tape"].str.upper()
     return df[["Tape", "Tracks"]].set_index("Tape")
 
 def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
