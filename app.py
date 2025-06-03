@@ -65,10 +65,6 @@ def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
 
         _, tape, track_type, src_in, src_out, rec_in, rec_out = match.groups()
 
-        # Only process video events
-        #if track_type != 'V':
-        #    continue
-
         # Get track list from ALE, fallback to A1
         audio_tracks_str = tape_to_tracks.get(tape, "A1")
         audio_tracks = audio_tracks_str.split()
@@ -111,7 +107,27 @@ with center_col:
     Your files will never be stored/uploaded/used to train advanced AI Assistant Editors.
    
     ---
+
+    Want to give it a spin? Download these:
+
     """)
+
+    with open("ALE_Example.ale", "rb") as f:
+    st.download_button(
+        label="Download Sample ALE",
+        data=f,
+        file_name="ALE_Example.ale",
+        mime="text/ale"
+    )
+
+    with open("V1 EDL Example.edl", "rb") as f:
+    st.download_button(
+        label="Download Sample EDL",
+        data=f,
+        file_name="V1 EDL Example.edl",
+        mime="text/edl"
+    )
+    
     
     # File uploaders
     uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
