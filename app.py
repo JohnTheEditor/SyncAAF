@@ -167,6 +167,8 @@ with center_col:
             st.error(f"An error occurred: {str(e)}")
             st.error("Please make sure your files are in the correct format.")
 
+    st.markdown("---")
+
     with st.expander("How to use me (click to expand)"):
         st.markdown("""
         
