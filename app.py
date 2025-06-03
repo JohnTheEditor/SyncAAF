@@ -121,7 +121,7 @@ with center_col:
                 mime="text/ale"
             )
     except FileNotFoundError:
-    st.warning("Sample ALE file not found")
+        st.warning("Sample ALE file not found")
 
     try:
         with open("V1 EDL Example.edl", "rb") as f:
@@ -132,7 +132,7 @@ with center_col:
                 mime="text/edl"
             )
     except FileNotFoundError:
-    st.warning("Sample EDL file not found")
+        st.warning("Sample EDL file not found")
     
     # File uploaders
     uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
