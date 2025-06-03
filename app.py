@@ -108,26 +108,31 @@ with center_col:
    
     ---
 
-    Want to give it a spin? Download these:
+    Want to give it a try?
 
     """)
 
-    with open("ALE_Example.ale", "rb") as f:
-        st.download_button(
-            label="Download Sample ALE",
-            data=f,
-            file_name="ALE_Example.ale",
-            mime="text/ale"
-        )
+    try:
+        with open("ALE_Example.ale", "rb") as f:
+            st.download_button(
+                label="Download Sample ALE",
+                data=f,
+                file_name="ALE_Example.ale",
+                mime="text/ale"
+            )
+    except FileNotFoundError:
+    st.warning("Sample ALE file not found")
 
-    with open("V1 EDL Example.edl", "rb") as f:
-        st.download_button(
-            label="Download Sample EDL",
-            data=f,
-            file_name="V1 EDL Example.edl",
-            mime="text/edl"
-        )
-    
+    try:
+        with open("V1 EDL Example.edl", "rb") as f:
+            st.download_button(
+                label="Download Sample EDL",
+                data=f,
+                file_name="V1 EDL Example.edl",
+                mime="text/edl"
+            )
+    except FileNotFoundError:
+    st.warning("Sample EDL file not found")
     
     # File uploaders
     uploaded_ale = st.file_uploader("Upload your ALE file", type=["ale"])
