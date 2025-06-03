@@ -66,8 +66,8 @@ def transform_edl_with_audio_tracks(edl_content, tape_to_tracks):
         _, tape, track_type, src_in, src_out, rec_in, rec_out = match.groups()
 
         # Only process video events
-        if track_type != 'V':
-            continue
+        #if track_type != 'V':
+        #    continue
 
         # Get track list from ALE, fallback to A1
         audio_tracks_str = tape_to_tracks.get(tape, "A1")
